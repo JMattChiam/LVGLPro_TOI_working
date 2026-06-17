@@ -92,7 +92,7 @@ static lv_anim_timeline_t * timeline_timeline_value_modified_create(lv_obj_t * o
     lv_anim_init(&a);
     lv_anim_set_custom_exec_cb(&a, int_anim_exec_cb);
     lv_anim_set_var(&a, obj);
-    lv_anim_set_values(&a, 64, 256);
+    lv_anim_set_values(&a, 64, 255);
     lv_anim_set_duration(&a, ANIMATION_DURATION);
     lv_anim_set_user_data(&a, (void *)((uintptr_t)selector_and_prop));
     lv_anim_set_early_apply(&a, true);

@@ -9,7 +9,7 @@
 				duration="#animation_duration"
 				prop="opa"
 				start="64"
-				end="256"
+				end="255"
 				delay="#animation_duration"
 				early_apply="true"
 			/>

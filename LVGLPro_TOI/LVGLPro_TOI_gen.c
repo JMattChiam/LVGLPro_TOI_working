@@ -39,8 +39,6 @@
  *  Permanent screens
  *-------------------*/
 
-lv_obj_t * screen_1 = NULL;
-
 /*----------------
  * Fonts
  *----------------*/
@@ -163,10 +161,6 @@ void LVGLPro_TOI_init_gen(const char * asset_path)
      *-------------------*/
     /* If XML is enabled it's assumed that the permanent screens are created
      * manaully from XML using lv_xml_create() */
-    /* To allow screens to reference each other, create them all before calling the sceen create functions */
-    screen_1 = lv_obj_create(NULL);
-
-    screen_1_create();
 #endif
 }
 

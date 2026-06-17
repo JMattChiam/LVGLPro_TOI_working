@@ -47,8 +47,6 @@ extern "C" {
  * Permanent screens
  *------------------*/
 
-extern lv_obj_t * screen_1;
-
 /*----------------
  * Global styles
  *----------------*/

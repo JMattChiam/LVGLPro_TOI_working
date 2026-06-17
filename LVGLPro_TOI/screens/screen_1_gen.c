@@ -42,8 +42,7 @@ lv_obj_t * screen_1_create(void)
         style_inited = true;
     }
 
-    if (screen_1 == NULL) screen_1 = lv_obj_create(NULL);
-    lv_obj_t * lv_obj_0 = screen_1;
+    lv_obj_t * lv_obj_0 = lv_obj_create(NULL);
     lv_obj_set_name_static(lv_obj_0, "screen_1_#");
 
     lv_obj_bind_style(lv_obj_0, &style_dark_mode, 0, &is_dark_mode, 1);
