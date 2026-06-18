@@ -77,6 +77,7 @@ extern const void * symbol_minus;
 
 extern lv_subject_t room1_temperature;
 extern lv_subject_t is_dark_mode;
+extern lv_subject_t application_uptime;
 
 /**********************
  * GLOBAL PROTOTYPES
@@ -85,6 +86,8 @@ extern lv_subject_t is_dark_mode;
 /*----------------
  * Event Callbacks
  *----------------*/
+
+void led_callback(lv_event_t * e);
 
 /**
  * Initialize the component library

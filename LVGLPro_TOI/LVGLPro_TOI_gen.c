@@ -72,6 +72,7 @@ lv_style_t style_dark_mode;
 
 lv_subject_t room1_temperature;
 lv_subject_t is_dark_mode;
+lv_subject_t application_uptime;
 
 /**********************
  *      MACROS
@@ -127,6 +128,7 @@ void LVGLPro_TOI_init_gen(const char * asset_path)
      *----------------*/
     lv_subject_init_int(&room1_temperature, 20);
     lv_subject_init_int(&is_dark_mode, 0);
+    lv_subject_init_int(&application_uptime, 0);
 
     /*----------------
      * Translations
@@ -143,8 +145,10 @@ void LVGLPro_TOI_init_gen(const char * asset_path)
     /* Register subjects */
     lv_xml_register_subject(NULL, "room1_temperature", &room1_temperature);
     lv_xml_register_subject(NULL, "is_dark_mode", &is_dark_mode);
+    lv_xml_register_subject(NULL, "application_uptime", &application_uptime);
 
     /* Register callbacks */
+    lv_xml_register_event_cb(NULL, "led_callback", led_callback);
 #endif
 
     /* Register all the global assets so that they won't be created again when globals.xml is parsed.
@@ -165,6 +169,13 @@ void LVGLPro_TOI_init_gen(const char * asset_path)
 }
 
 /* Callbacks */
+#if defined(LV_EDITOR_PREVIEW)
+void __attribute__((weak)) led_callback(lv_event_t * e)
+{
+    LV_UNUSED(e);
+    LV_LOG("led_callback was called\n");
+}
+#endif
 
 /**********************
  *   STATIC FUNCTIONS

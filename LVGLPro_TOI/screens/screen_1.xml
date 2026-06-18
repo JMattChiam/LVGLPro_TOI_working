@@ -16,5 +16,19 @@
 			<lv_label text="Toggle style" />
 			<subject_toggle_event subject="is_dark_mode" />
 		</lv_button>
+
+		<lv_button align="bottom_left" y="-50" x="20">
+			<event_cb callback="led_callback" trigger="clicked" user_data="5" />
+			<lv_label text="Blink LED" />
+		</lv_button>
+
+		<lv_label
+			bind_text="application_uptime"
+			bind_text-fmt="%d s"
+			align="bottom_right"
+			x="-10"
+			y="-50"
+			style_text_font="font_medium"
+		/>
 	</view>
 </screen>

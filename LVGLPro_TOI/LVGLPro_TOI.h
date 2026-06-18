@@ -35,7 +35,7 @@ extern "C" {
  * Initialize the component library
  */
 void LVGLPro_TOI_init(const char * asset_path);
-
+void led_callback(lv_event_t * e);
 /**********************
  *      MACROS
  **********************/

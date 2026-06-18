@@ -65,6 +65,21 @@ lv_obj_t * screen_1_create(void)
 
     lv_obj_add_subject_toggle_event(lv_button_0, &is_dark_mode, LV_EVENT_CLICKED);
 
+    lv_obj_t * lv_button_1 = lv_button_create(lv_obj_0);
+    lv_obj_set_align(lv_button_1, LV_ALIGN_BOTTOM_LEFT);
+    lv_obj_set_y(lv_button_1, -50);
+    lv_obj_set_x(lv_button_1, 20);
+    lv_obj_add_event_cb(lv_button_1, led_callback, LV_EVENT_CLICKED, "5");
+    lv_obj_t * lv_label_2 = lv_label_create(lv_button_1);
+    lv_label_set_text(lv_label_2, "Blink LED");
+
+    lv_obj_t * lv_label_3 = lv_label_create(lv_obj_0);
+    lv_label_bind_text(lv_label_3, &application_uptime, "%d s");
+    lv_obj_set_align(lv_label_3, LV_ALIGN_BOTTOM_RIGHT);
+    lv_obj_set_x(lv_label_3, -10);
+    lv_obj_set_y(lv_label_3, -50);
+    lv_obj_set_style_text_font(lv_label_3, font_medium, 0);
+
     LV_TRACE_OBJ_CREATE("finished");
 
     return lv_obj_0;

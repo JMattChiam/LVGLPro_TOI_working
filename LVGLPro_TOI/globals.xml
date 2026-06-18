@@ -16,6 +16,7 @@
 		<!-- Add <int>, <string>, or <float> subjects here -->
 		<int name="room1_temperature" value="20" />
 		<int name="is_dark_mode" value="0" />
+		<int name="application_uptime" value="0" />
 	</subjects>
 
 	<images>
